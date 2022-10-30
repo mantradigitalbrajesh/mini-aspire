@@ -66,4 +66,24 @@ class User extends Authenticatable
         $result = User::where('email','=',$email)->first();
         return $result;
     }
+
+    //Check if Customer Exists based on Customer Role
+    protected function checkUserExists($get_token)
+    {
+        $result = User::select("users.id")->join('users_roles','users_roles.user_id','=','users.id')
+        ->where('remember_token','=',$get_token)
+        ->where('users_roles.role_id','=',2)
+        ->first();
+        return $result;
+    }
+
+    //Check if Admin Exists based on Admin Role
+    protected function checkAdminExists($get_token)
+    {
+        $result = User::select("users.id")->join('users_roles','users_roles.user_id','=','users.id')
+        ->where('remember_token','=',$get_token)
+        ->where('users_roles.role_id','=',1)
+        ->first();
+        return $result;
+    }
 }
