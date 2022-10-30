@@ -3,7 +3,7 @@
 
 It is an app that allows authenticated users to go through a loan application and Apply for loan.
 
-Loan Amount would be paid all together all it could be paid weekly based on term selected by customer
+Loan Amount would be paid all together or it could be paid weekly based on term selected by customer
 
 
 
