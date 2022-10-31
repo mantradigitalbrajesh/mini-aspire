@@ -33,6 +33,26 @@ Loan Amount would be paid all together or it could be paid weekly based on term 
 **3. Run the following command's**
 
 ```bash
+  composer update
+  
+  if You Get this error
+  In order to use the Auth::routes() method, please install the laravel/ui package.
+  Run Below Commands
+  
+  composer require laravel/ui
+  php artisan ui vue --auth
+```
+```bash
+  composer require doctrine/dbal
+```
+```bash
+  php artisan key:generate
+```
+```bash
+  php artisan config:cache
+  php artisan config:clear
+```
+```bash
   php artisan migrate
 ```
 ```bash
